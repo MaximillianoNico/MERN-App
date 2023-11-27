@@ -5,7 +5,6 @@ import uploader from '../../common/uploader';
 
 const router = express.Router();
 
-
 const FilesController = () => {
   const uploadFile = async (req: Request, res: Response) => {
     try {
@@ -39,9 +38,39 @@ const FilesController = () => {
       
       return res.status(400).send(data);
     }
-  }
+  };
 
-  router.post('/add-file', uploader.upload.single("files"), uploadFile);
+  const getFiles = async (req: Request, res: Response) => {
+    try {
+      const username = req?.query?.username;
+      const row = await Users.findOne({ username })
+
+      if (!row?._id) throw new Error("username is required");
+
+      const rows = await Files.find({ userId: row._id }).exec();
+
+      const data = {
+        uptime: process.uptime(),
+        message: 'Success',
+        date: new Date(),
+        data: rows
+      };
+  
+      return res.status(200).send(data);
+    } catch (err) {
+      const data = {
+        uptime: process.uptime(),
+        message: 'Error',
+        error: err,
+        date: new Date()
+      };
+      
+      return res.status(400).send(data);
+    }
+  };
+
+  router.get('/', getFiles);
+  router.post('/add-file', uploader.upload.single("file"), uploadFile);
 
   return router;
 }
