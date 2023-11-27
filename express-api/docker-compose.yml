@@ -1,0 +1,25 @@
+version: '3.8'
+
+services: 
+  mongodb:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+  app:
+    depends_on:
+      - mongodb
+    build: .
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    environment:
+      PORT: 8080
+      MONGO_URL: mongodb://mongodb:27017
+      MONGO_INITDB_DATABASE: fastco-db
+    stdin_open: true
+    tty: true
+    
+volumes:
+  mongo_data: {}
