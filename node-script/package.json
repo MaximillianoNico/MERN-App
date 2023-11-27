@@ -1,0 +1,17 @@
+{
+  "name": "node-script",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "volta": {
+    "node": "18.17.0",
+    "yarn": "1.22.10"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.2",
+    "mongoose": "^8.0.1"
+  },
+  "scripts": {
+    "run:csv": "node ./insert-csv-into-collection.js"
+  }
+}
