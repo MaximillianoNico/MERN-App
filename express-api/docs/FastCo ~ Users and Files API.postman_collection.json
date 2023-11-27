@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "aaabd918-7133-4a9e-8c4f-27e41a4735fa",
+		"name": "FastCo ~ Users and Files API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4055949"
+	},
+	"item": [
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/app/health-check",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"app",
+						"health-check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user-10",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/maximillianonico/Downloads/kocheng-pluk.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/api/files/add-file",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"files",
+						"add-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Files by Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/files?username=user-10",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"files"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "user-10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
