@@ -1,42 +1,62 @@
 [
   {
     "username": "user-1",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-1@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-2",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-2@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-3",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-3@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-4",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-4@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-5",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-5@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-6",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-6@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-7",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-7@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-8",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-8@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-9",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-9@gmail.com",
+    "phone": "081231231231"
   },
   {
     "username": "user-10",
-    "address": "Jakarta"
+    "address": "Jakarta",
+    "email": "user-10@gmail.com",
+    "phone": "081231231231"
   }
 ]
