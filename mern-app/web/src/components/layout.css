@@ -1,0 +1,22 @@
+.layout {
+  display: flex;
+  justify-content: center;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headers > .menus {
+  display: flex;
+  column-gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headers > .menus > .menu {
+  cursor: pointer;
+  margin: 0px;
+}

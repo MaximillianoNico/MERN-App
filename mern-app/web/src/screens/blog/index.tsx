@@ -3,6 +3,8 @@ import { SearchOutlined } from '@ant-design/icons';
 import Layout from "../../components/layout"
 import { useAction } from "./actions";
 
+import "./blog.css";
+
 const Screen = () => {
   const { search ,content, onSearch } = useAction();
   return (
@@ -10,7 +12,7 @@ const Screen = () => {
       <Typography.Title>
         Blog
       </Typography.Title>
-      <div style={{ margin: '20px 0px'}}>
+      <div className="searchbox">
         <Input onChange={onSearch} placeholder="" prefix={<SearchOutlined />} />
       </div>
       {search && (
@@ -18,7 +20,7 @@ const Screen = () => {
           {content.length} result for {search}
         </Typography.Title>
       )}
-      <div style={{ display: 'grid', gridTemplateColumns: 'auto auto', columnGap: 10, rowGap: 10 }}>
+      <div className="blog-content">
         {!!content?.length && content.map(
           ({ content, title }) => (
             <Card

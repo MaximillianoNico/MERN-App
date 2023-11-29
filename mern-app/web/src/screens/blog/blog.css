@@ -1,0 +1,10 @@
+.searchbox {
+  margin: 20px 0px;
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+}
