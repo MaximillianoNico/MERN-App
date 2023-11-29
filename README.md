@@ -15,6 +15,12 @@ Create API with express include endpoint for list of users, middleware and uploa
 - [App Repository](https://github.com/MaximillianoNico/MERN-App/tree/master/express-api)<br />
 - [Postman Collection](https://github.com/MaximillianoNico/MERN-App/tree/master/express-api)
 
+How to run:
+```bash
+# for running the express-api, we can use docker-compose by follow this script
+docker-compose up --build # execute the script on the root of folder project
+```
+
 ### React Component
 Here is the Web App by using React that show list of items, function input limit list and Contact Form Component.
 
@@ -49,7 +55,7 @@ for running this app, we can running by docker-compose
 cd mern-app
 
 # Run docker compose
-docker-compose up
+docker-compose up --build
 
 # Run Web app
 cd web && yarn start
