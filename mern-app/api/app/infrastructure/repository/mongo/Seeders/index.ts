@@ -1,10 +1,13 @@
 import Users from "../Users";
+import Blog from "../Blog";
+
+import blog from './blog.json';
 
 export const InitSeeder = async () => {
   try {
     const users = await Users.find({});
+    const blogContent = await Blog.find({});
 
-    console.log('Users Data: ', users);
     if (!users.length) {
       const newUser = new Users({
         username: "user-1",
@@ -13,6 +16,10 @@ export const InitSeeder = async () => {
       });
   
       await newUser.save();
+    }
+
+    if (!blogContent.length) {
+      await Blog.insertMany(blog);
     }
   } catch (err) {
     console.log('error init seeder: ', err)
